@@ -1,0 +1,113 @@
+:root {
+  --green: #1f3b34;
+  --saffron: #e0a526;
+  --mist: #eef2ee;
+  --ink: #17211e;
+  --serif: Georgia, "Times New Roman", serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--mist);
+  line-height: 1.6;
+}
+
+h1, h2, .logo { font-family: var(--serif); }
+
+a:focus-visible, .button:focus-visible {
+  outline: 3px solid var(--saffron);
+  outline-offset: 3px;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  background: var(--green);
+}
+.logo {
+  color: #fff;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+nav a {
+  color: #dfe9e4;
+  margin-left: 1.25rem;
+  text-decoration: none;
+}
+nav a:hover,
+nav a[aria-current="page"] {
+  color: var(--saffron);
+}
+
+/* Hero */
+.hero {
+  padding: 5rem 1.5rem;
+  background: var(--green);
+  color: #fff;
+}
+.hero h1 {
+  max-width: 14ch;
+  margin: 0 0 1rem;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  line-height: 1.05;
+}
+.hero p {
+  max-width: 45ch;
+  margin: 0 0 2rem;
+  font-size: 1.15rem;
+  color: #dfe9e4;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--saffron);
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.button:hover { background: #f0b83a; }
+
+/* Sections */
+.menu-preview,
+.visit {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+h2 { margin-top: 0; font-size: 1.75rem; }
+
+.menu-preview ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menu-preview li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #c4d0c9;
+}
+
+.visit { border-top: 4px solid var(--saffron); }
+
+/* Footer */
+footer {
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  background: var(--green);
+  color: #dfe9e4;
+}
+footer p { margin: 0; }
