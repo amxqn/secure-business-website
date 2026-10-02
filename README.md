@@ -31,4 +31,4 @@ Small businesses often have websites that look fine but aren't protected. This p
 
 ## Author
 
-Amin, BSc Cybersecurity student at Canadian University
+amxqn
