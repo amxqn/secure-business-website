@@ -2,7 +2,7 @@
 
 A demo website for a fictional Sharjah coffee house, built to practice combining web design with cybersecurity.
 
-**Live site:** https://YOURUSERNAME.github.io/secure-business-website
+**Live site:** https://amxqn.github.io/secure-business-website
 
 ## About
 
