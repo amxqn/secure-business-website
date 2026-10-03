@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; form-action https://formspree.io; base-uri 'self'">
+  <title>Security | Dallah Corner</title>
+  <meta name="description" content="How this demo website is protected, what a security scan found, and what comes next.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="logo" href="index.html">Dallah Corner</a>
+    <nav aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="contact.html">Contact</a>
+      <a href="security.html" aria-current="page">Security</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero hero-short">
+      <h1>Protected from the first line.</h1>
+      <p>A demo website built to show how a small business site can be secured from day one, with every choice explained.</p>
+      <a class="button" href="#protected">See what is protected</a>
+    </section>
+
+    <section class="section" id="protected" aria-labelledby="done">
+      <h2 id="done">What is protected</h2>
+      <p>Six protections are already in place on this site.</p>
+      <ul class="grid">
+        <li>
+          <span class="num">01</span>
+          <h3>HTTPS everywhere</h3>
+          <p>The site is served over an encrypted connection, so data can't be read or changed on its way to the visitor.</p>
+          <span class="status">In place</span>
+        </li>
+        <li>
+          <span class="num">02</span>
+          <h3>Content Security Policy</h3>
+          <p>The browser only loads scripts and styles from this site, which limits the damage if malicious code were ever injected.</p>
+          <span class="status">In place</span>
+        </li>
+        <li>
+          <span class="num">03</span>
+          <h3>Input validation</h3>
+          <p>The contact form checks name, email and message for length and format before anything is sent.</p>
+          <span class="status">In place</span>
+        </li>
+        <li>
+          <span class="num">04</span>
+          <h3>Safe output</h3>
+          <p>Error messages are written as plain text, never as HTML, which blocks cross-site scripting through the form.</p>
+          <span class="status">In place</span>
+        </li>
+        <li>
+          <span class="num">05</span>
+          <h3>Bot filtering</h3>
+          <p>A hidden honeypot field catches simple spam bots without making real visitors solve puzzles.</p>
+          <span class="status">In place</span>
+        </li>
+        <li>
+          <span class="num">06</span>
+          <h3>No third-party code</h3>
+          <p>No outside fonts, trackers or libraries, so there is less code from other people to trust.</p>
+          <span class="status">In place</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="found">
+      <h2 id="found">What a scan found</h2>
+      <p>The live site was checked with securityheaders.com. Replace the bracketed parts with your real results before publishing.</p>
+      <dl class="scan">
+        <div>
+          <dt>Overall grade</dt>
+          <dd>[Write your grade, for example "D"]</dd>
+        </div>
+        <div>
+          <dt>Headers flagged</dt>
+          <dd>[List what the scan flagged, for example Strict-Transport-Security and X-Frame-Options]</dd>
+        </div>
+        <div>
+          <dt>Why</dt>
+          <dd>GitHub Pages doesn't let site owners set custom HTTP headers, so some protections can't be added on this host.</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="section" aria-labelledby="next">
+      <h2 id="next">What comes next</h2>
+      <p>Three improvements are planned.</p>
+      <ul class="grid">
+        <li>
+          <span class="num">A</span>
+          <h3>Cloudflare in front</h3>
+          <p>A free plan can add the missing headers and extra filtering before traffic reaches the site.</p>
+          <span class="status">Planned</span>
+        </li>
+        <li>
+          <span class="num">B</span>
+          <h3>Server-side checks</h3>
+          <p>Browser checks can be bypassed, so a real site must validate on the server too. Formspree handles this for the demo.</p>
+          <span class="status">Planned</span>
+        </li>
+        <li>
+          <span class="num">C</span>
+          <h3>Deeper audit</h3>
+          <p>Test the site against the OWASP Top 10 with OWASP ZAP and write up the findings.</p>
+          <span class="status">Planned</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="visit">
+      <h2>Built by Amin</h2>
+      <p>BSc Cybersecurity student, Canadian University Dubai.</p>
+      <p>Open to part-time and freelance work building secure websites for small businesses.</p>
+      <a class="button" href="contact.html">Get in touch</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Dallah Corner. A demo website for portfolio purposes.</p>
+  </footer>
+
+</body>
+</html>

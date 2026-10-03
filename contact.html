@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Content Security Policy: only allow our own files, and only let the form send to Formspree -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; form-action https://formspree.io; base-uri 'self'">
+  <title>Contact | Dallah Corner</title>
+  <meta name="description" content="Get in touch with Dallah Corner, a coffee house in Sharjah.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="logo" href="index.html">Dallah Corner</a>
+    <nav aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+      <a href="security.html">Security</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="menu-preview">
+      <h1>Contact</h1>
+      <p>Questions, catering or a table for a group? Send us a message and we'll reply within a day.</p>
+
+      <form id="contact-form" class="contact-form" method="POST" action="https://formspree.io/f/YOUR_FORM_ID" novalidate>
+
+        <div class="field">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" autocomplete="name" minlength="2" maxlength="60" required>
+          <p class="error" id="name-error" role="alert"></p>
+        </div>
+
+        <div class="field">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" autocomplete="email" maxlength="100" required>
+          <p class="error" id="email-error" role="alert"></p>
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" minlength="10" maxlength="1000" required></textarea>
+          <p class="hint"><span id="count">0</span> / 1000</p>
+          <p class="error" id="message-error" role="alert"></p>
+        </div>
+
+        <!-- Honeypot: hidden from people, but bots fill it in -->
+        <div class="honey" aria-hidden="true">
+          <label for="website">Leave this field empty</label>
+          <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
+        </div>
+
+        <button type="submit" class="button">Send message</button>
+        <p class="form-status" id="form-status" role="status"></p>
+      </form>
+    </section>
+
+    <section class="visit">
+      <h2>Find us</h2>
+      <p>Muweilah Commercial, Sharjah</p>
+      <p>Open daily, 7:00 am to 11:00 pm</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Dallah Corner. A demo website for portfolio purposes.</p>
+  </footer>
+
+  <script src="contact.js"></script>
+</body>
+</html>
