@@ -40,7 +40,7 @@
         <li>
           <span class="num">02</span>
           <h3>Content Security Policy</h3>
-          <p>The browser only loads scripts and styles from this site, which limits the damage if malicious code were ever injected.</p>
+          <p>Set with a meta tag on every page, so the browser only loads scripts and styles from this site. This limits the damage if malicious code were ever injected.</p>
           <span class="status">In place</span>
         </li>
         <li>
@@ -72,19 +72,23 @@
 
     <section class="section" aria-labelledby="found">
       <h2 id="found">What a scan found</h2>
-      <p>The live site was checked with securityheaders.com. Replace the bracketed parts with your real results before publishing.</p>
+      <p>The live site was scanned with securityheaders.com on 3 October 2026. The grade is low, and the reasons are explained below.</p>
       <dl class="scan">
         <div>
           <dt>Overall grade</dt>
-          <dd>[Write your grade, for example "D"]</dd>
+          <dd>D</dd>
         </div>
         <div>
-          <dt>Headers flagged</dt>
-          <dd>[List what the scan flagged, for example Strict-Transport-Security and X-Frame-Options]</dd>
+          <dt>Passed</dt>
+          <dd>Strict-Transport-Security, which tells browsers to always use HTTPS. GitHub Pages sends this one automatically.</dd>
+        </div>
+        <div>
+          <dt>Flagged</dt>
+          <dd>Content-Security-Policy, X-Frame-Options, X-Content-Type-Options, Referrer-Policy and Permissions-Policy.</dd>
         </div>
         <div>
           <dt>Why</dt>
-          <dd>GitHub Pages doesn't let site owners set custom HTTP headers, so some protections can't be added on this host.</dd>
+          <dd>GitHub Pages doesn't let site owners set custom HTTP headers. The Content Security Policy is set with a meta tag on every page, but the scanner only reads real headers, so it still reports it as missing. A meta tag also can't set clickjacking protection, which needs a header.</dd>
         </div>
       </dl>
     </section>
@@ -96,7 +100,7 @@
         <li>
           <span class="num">A</span>
           <h3>Cloudflare in front</h3>
-          <p>A free plan can add the missing headers and extra filtering before traffic reaches the site.</p>
+          <p>A free plan can add the five missing headers as real HTTP headers, and a second scan can show the grade improving.</p>
           <span class="status">Planned</span>
         </li>
         <li>
